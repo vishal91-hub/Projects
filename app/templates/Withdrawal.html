@@ -1,0 +1,27 @@
+{% extends 'base-demo.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="mt-5 mb-4">Withdrawal Window:</h1>
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <h2>Your Account Details:</h2>
+                <div class="border p-3">
+                    <p><strong>Name:</strong> {{ account.name }} - <strong>Account Number:</strong> {{ account.account_number }} - <strong>Balance:</strong> {{ account.balance }}</p>
+                </div>
+                <div class="mt-4">
+                    <h3>Withdrawal Amount:</h3>
+                    <form method="POST" action="{{ url_for('Withdraw') }}" class="mt-3">
+                        {{ form.hidden_tag() }}
+                        <div class="mb-3">
+                            <label for="withdrawAmount" class="form-label"><strong>Enter the withdrawal amount:</strong></label>
+                            {{ form.amount(class="form-control", id="withdrawAmount") }}
+                        </div>
+                        {{ form.submit(class="btn btn-primary") }}
+                    </form>
+                </div>
+                <!-- Other content for the withdrawal window -->
+            </div>
+        </div>
+    </div>
+{% endblock %}

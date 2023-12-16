@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+    <h1>Account Registration</h1>
+    <form method="POST" action="{{ url_for('registerdata') }}">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.id.label }} {{ form.id() }}
+        </div>
+        <div>
+            {{ form.name.label }} {{ form.name() }}
+        </div>
+        <div>
+            {{ form.account_number.label }} {{ form.account_number() }}
+        </div>
+        <div>
+            {{ form.balance.label }} {{ form.balance() }}
+        </div>
+        <div>
+            {{ form.user_id.label }} {{ form.user_id() }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</body>
+{% endblock %}

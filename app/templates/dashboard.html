@@ -1,0 +1,27 @@
+{% extends 'base-demo.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="mt-5 mb-4">Welcome to the Dashboard</h1>
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <h2>Your Account Details:</h2>
+                <div class="border p-4">
+                    {% for account in account_details %}
+                        <div class="mb-3">
+                            <strong style="font-size: 18px;">Name:</strong> <span style="font-size: 18px; font-weight: bold;">{{ account.name }}</span><br>
+                            <strong style="font-size: 18px;">Account Number:</strong> <span style="font-size: 18px; font-weight: bold;">{{ account.account_number }}</span><br>
+                            <strong style="font-size: 18px;">Balance:</strong> <span style="font-size: 18px; font-weight: bold;">{{ account.balance }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- Other content for the dashboard -->
+                <div class="d-flex justify-content-between mt-4">
+                    <a href="{{ url_for('Deposit') }}" class="btn btn-primary">Deposit</a>
+                    <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+                    <a href="{{ url_for('Withdraw') }}" class="btn btn-warning">Withdraw</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
