@@ -1,5 +1,14 @@
-# Projects
-This projects invloves creation of a banking application with basic use like login,display of user account, deposit and withdrawal of funds.
-<br>The project is developed by using flas,python, jinja and bootstrap.
-<br>
-Authored by Vishal Singh
+Banking Application
+This is a web-based banking application developed using Flask, Bootstrap, and Jinja. The application provides various functionalities for managing user accounts, transactions, and other banking operations.
+
+Features
+User authentication and authorization
+Account management (create, update, delete accounts)
+Balance inquiries
+Fund transfers
+Account statements
+Technologies Used
+Flask: Python-based web framework used for backend development.
+Bootstrap: Frontend framework for building responsive and mobile-first websites.
+Jinja: Templating engine for generating dynamic HTML content.
+Setup Instructions
